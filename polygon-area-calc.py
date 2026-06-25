@@ -14,3 +14,9 @@
 #   - Overrides set_width and set_height to keep width and height in sync
 #   - Adds set_side as a dedicated way to update the side length
 
+class Rectangle:
+    """ Base class representing a rectangle with independent width and height. """
+
+    def __init__(self, width, height):
+        self.width = width
+        self.height = height
