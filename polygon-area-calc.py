@@ -51,3 +51,8 @@ class Rectangle:
             return "Too big for picture."
         # Build one row of stars and repeat it height times
         return ("*" * self.width + "\n") * self.height
+
+    def get_amount_inside(self, shape):
+        # Integer division tells how many times the shape fits along each axis
+        # Multiply both axes for the total count (no rotations allowed)
+        return (self.width // shape.width) * (self.height // shape.height)
