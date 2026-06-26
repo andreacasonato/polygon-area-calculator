@@ -20,3 +20,15 @@ class Rectangle:
     def __init__(self, width, height):
         self.width = width
         self.height = height
+
+    def set_width(self, width):
+        # Update width independently
+        self.width = width
+
+    def set_height(self, height):
+        # Update height independently
+        self.height = height
+
+    def __str__(selff):
+        # Controls what print() and str() show for a Rectangle instance
+        return f"Rectangle(width={self.width}, height={self.height}"
