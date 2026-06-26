@@ -44,3 +44,10 @@ class Rectangle:
     def get_diagonal(self):
         # Diagonal via Pythagoras
         return (self.width ** 2 + self.height ** 2) ** 0.5
+
+    def get_picture(self):
+        # Dimensions over 50 can't be drawn
+        if self.width > 50 or self.height > 50:
+            return "Too big for picture."
+        # Build one row of stars and repeat it height times
+        return ("*" * self.width + "\n") * self.height
