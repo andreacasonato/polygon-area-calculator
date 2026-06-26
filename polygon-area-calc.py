@@ -69,3 +69,18 @@ class Square(Rectangle):
         # Overrides Rectangle's __str__ — width and height are always equal
         # so we only need to show one value labelled as "side"
         return f"Square(side={self.width})"
+
+    def set_width(self, side):
+        # Overrides Rectangle's version: updating one side updates both
+        self.width = side
+        self.height = side
+
+    def set_height(self, side):
+        # Overrides Rectangle's version: updating one side updates both
+        self.width = side
+        self.height = side
+
+    def set_side(self, side):
+        # Dedicated Square method -> identical effect to set_width/set_height
+        self.width = side
+        self.height = side
