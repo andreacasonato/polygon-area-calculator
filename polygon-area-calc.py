@@ -56,3 +56,16 @@ class Rectangle:
         # Integer division tells how many times the shape fits along each axis
         # Multiply both axes for the total count (no rotations allowed)
         return (self.width // shape.width) * (self.height // shape.height)
+
+
+class Square(Rectangle):
+    """Rectangle subclass that enforces equal width and height at all times."""
+
+    def __init__(self, side):
+        # Pass the same value for both width and height to the parent
+        super().__init__(side, side)
+
+    def __str__(self):
+        # Overrides Rectangle's __str__ — width and height are always equal
+        # so we only need to show one value labelled as "side"
+        return f"Square(side={self.width})"
