@@ -29,6 +29,18 @@ class Rectangle:
         # Update height independently
         self.height = height
 
-    def __str__(selff):
+    def __str__(self):
         # Controls what print() and str() show for a Rectangle instance
         return f"Rectangle(width={self.width}, height={self.height}"
+
+    def get_area(self):
+        # Area formula
+        return self.width * self.height
+
+    def get_perimeter(self):
+        # Perimeter formula
+        return 2 * (self.width + self.height)
+
+    def get_diagonal(self):
+        # Diagonal via Pythagoras
+        return (self.width ** 2 + self.height ** 2) ** 0.5
